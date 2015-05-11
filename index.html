@@ -18,14 +18,15 @@
   </head>
   <body>
     <pre id='m'></pre>
-    <fieldset>
+    <div>
+    <fieldset style="display:inline">
       <legend>Hats</legend>
       <lable for="hat0">None</lable><input type="radio" id="hat0" name="h" value="0" onchange="uMonster()" checked/></br>
       <lable for="hat1">Straw</lable><input type="radio" id="hat1" name="h" value="1" onchange="uMonster()"/></br>
       <lable for="hat2">Top</lable><input type="radio" id="hat2" name="h" value="2" onchange="uMonster()"/></br>
       <lable for="hat3">Bowler</lable><input type="radio" id="hat3" name="h" value="3" onchange="uMonster()"/></br>
     </fieldset>
-    <fieldset>
+    <fieldset style="display:inline">
       <legend>Right Eye</legend>
       <lable for="re0">Big</lable><input type="radio" id="re0" name="re" value="0" onchange="uMonster()" checked/></br>
       <lable for="re1">Dialated</lable><input type="radio" id="re1" name="re" value="1" onchange="uMonster()"/></br>
@@ -34,7 +35,7 @@
       <lable for="re4">Happy</lable><input type="radio" id="re4" name="re" value="4" onchange="uMonster()"/></br>
       <lable for="re5">Stare</lable><input type="radio" id="re5" name="re" value="5" onchange="uMonster()"/></br>
     </fieldset>
-    <fieldset>
+    <fieldset style="display:inline">
       <legend>Left Eye</legend>
       <lable for="le0">Big</lable><input type="radio" id="le0" name="le" value="0" onchange="uMonster()" checked/></br>
       <lable for="le1">Dialated</lable><input type="radio" id="le1" name="le" value="1" onchange="uMonster()"/></br>
@@ -43,27 +44,27 @@
       <lable for="le4">Happy</lable><input type="radio" id="le4" name="le" value="4" onchange="uMonster()"/></br>
       <lable for="le5">Stare</lable><input type="radio" id="le5" name="le" value="5" onchange="uMonster()"/></br>
     </fieldset>
-    <fieldset>
+    <fieldset style="display:inline">
       <lable for="n0">Neck</lable><input type="radio" id="n0" name="n" value="0" onchange="uMonster()" checked/></br>
       <lable for="n1">No Neck</lable><input type="radio" id="n1" name="n" value="1" onchange="uMonster()"/></br>
     </fieldset>
-    <fieldset>
+    <fieldset style="display:inline">
       <lable for="j0">Neck Join</lable><input type="radio" id="j0" name="j" value="0" onchange="uMonster()" checked/></br>
       <lable for="j1">No Neck Join</lable><input type="radio" id="j1" name="j" value="1" onchange="uMonster()"/></br>
     </fieldset>
-    <fieldset>
+    <fieldset style="display:inline">
       <legend>Left Arm</legend>
       <lable for="la0">Up</lable><input type="radio" id="la0" name="la" value="0" onchange="uMonster()" checked/></br>
       <lable for="la1">Down</lable><input type="radio" id="la1" name="la" value="1" onchange="uMonster()"/></br>
       <lable for="la2">None</lable><input type="radio" id="la2" name="la" value="2" onchange="uMonster()"/></br>
     </fieldset>
-    <fieldset>
+    <fieldset style="display:inline">
       <legend>Right Arm</legend>
       <lable for="ra0">Up</lable><input type="radio" id="ra0" name="ra" value="1" onchange="uMonster()" checked/></br>
       <lable for="ra1">Down</lable><input type="radio" id="ra1" name="ra" value="0" onchange="uMonster()"/></br>
       <lable for="ra2">None</lable><input type="radio" id="ra2" name="ra" value="2" onchange="uMonster()"/></br>
     </fieldset>
-    <fieldset>
+    <fieldset style="display:inline">
       <legend>Mouth/Nose</legend>
       <lable for="m0">Smile</lable><input type="radio" id="m0" name="m" value="0" onchange="uMonster()" checked/></br>
       <lable for="m1">Flat</lable><input type="radio" id="m1" name="m" value="1" onchange="uMonster()"/></br>
@@ -72,7 +73,7 @@
       <lable for="m4">Small Nose</lable><input type="radio" id="m4" name="m" value="4" onchange="uMonster()"/></br>
       <lable for="m5">None</lable><input type="radio" id="m5" name="m" value="5" onchange="uMonster()"/></br>
     </fieldset>
-    <fieldset>
+    <fieldset style="display:inline">
       <legend>Feet</legend>
       <lable for="f0">Toes</lable><input type="radio" id="f0" name="f" value="0" onchange="uMonster()" checked/></br>
       <lable for="f1">Claws</lable><input type="radio" id="f1" name="f" value="1" onchange="uMonster()"/></br>
@@ -80,6 +81,7 @@
       <lable for="f3">One Foot</lable><input type="radio" id="f3" name="f" value="3" onchange="uMonster()"/></br>
       <lable for="f4">No Foot</lable><input type="radio" id="f4" name="f" value="4" onchange="uMonster()"/></br>
     </fieldset>
+  </div>
 
     <script type='text/javascript'>
     m = gMonster();

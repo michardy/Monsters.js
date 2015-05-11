@@ -1,6 +1,6 @@
 function uMonster(){
     var radio = document.getElementsByName('h');
-    hat = hats[loopCheck(radio)];
+    hat = hats[loopCheck(radio)-4];
     var radio = document.getElementsByName('le');
     lEye = eyes[loopCheck(radio)];
     var radio = document.getElementsByName('re');
@@ -18,9 +18,10 @@ function uMonster(){
     var radio = document.getElementsByName('ra');
     rArm = rArms[loopCheck(radio)];
     var radio = document.getElementsByName('m');
-    mouth = mouths[loopCheck(radio)];
+    mouth = mouths[loopCheck(radio)-5];
+    console.log(loopCheck(radio));
     var radio = document.getElementsByName('f');
-    foot = feet[loopCheck(radio)];
+    foot = feet[loopCheck(radio)-5];
     m = gMonster();
     document.getElementById('m').innerHTML = m;
 };

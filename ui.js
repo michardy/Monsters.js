@@ -27,7 +27,7 @@ function uMonster(){
 };
 
 function sUMonster(){
-    var radio = document.getElementsByName('h');
+    var radio = document.getElementsByName('ha');
     hat = hats[loopCheck(radio)];
     var radio = document.getElementsByName('e');
     lEye = eyes[loopCheck(radio)];
@@ -49,9 +49,9 @@ function sUMonster(){
     var radio = document.getElementsByName('a');
     lArm = arms[loopCheck(radio)];
     rArm = rArms[loopCheck(radio)];
-    var radio = document.getElementsByName('m');
+    var radio = document.getElementsByName('mo');
     mouth = mouths[loopCheck(radio)];
-    var radio = document.getElementsByName('f');
+    var radio = document.getElementsByName('fe');
     foot = feet[loopCheck(radio)];
     m = gMonster();
     document.getElementById('m').innerHTML = m;

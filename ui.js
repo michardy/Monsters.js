@@ -24,6 +24,7 @@ function uMonster(){
     foot = feet[loopCheck(radio)];
     m = gMonster();
     document.getElementById('m').innerHTML = m;
+    document.getElementById('text').value = remHTML(m);
 };
 
 function sUMonster(){
@@ -55,6 +56,7 @@ function sUMonster(){
     foot = feet[loopCheck(radio)];
     m = gMonster();
     document.getElementById('m').innerHTML = m;
+    document.getElementById('text').value = remHTML(m);
 };
 
 function loopCheck(radio){

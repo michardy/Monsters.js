@@ -1,6 +1,6 @@
 //There are 518,400 unique monsters
 
-var hats = ['', '&nbsp;&nbsp;_=====_</br>', '&nbsp;&nbsp;&nbsp;_____</br>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</br>&nbsp;_|_____|_</br>', '&nbsp;&nbsp;&nbsp;_____</br>&nbsp;_(_____)_</br>'];
+var hats = ['', '&nbsp;&nbsp;_=====_<br/>', '&nbsp;&nbsp;&nbsp;_____<br/>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br/>&nbsp;_|_____|_<br/>', '&nbsp;&nbsp;&nbsp;_____<br/>&nbsp;_(_____)_<br/>'];
 var necks = ['\\&nbsp;/', false];
 var nJoins = ['-&nbsp;⁀&nbsp;-', false];
 var eyeBs = ['⁔', '^']
@@ -24,17 +24,19 @@ var mouth = mouths[0];
 
 function gMonster(){
     if (nJoin && neck){
-        monster = hat+'&nbsp;&nbsp;&nbsp;'+lEyeB+'&nbsp;&nbsp;&nbsp;'+rEyeB+'</br>&nbsp;&nbsp;('+lEye+')&nbsp;('+rEye+')</br>&nbsp;&nbsp;&nbsp;&nbsp;'+neck+'</br>&nbsp;'+lArm+'&nbsp;'+nJoin+'&nbsp;'+rArm+'</br>&nbsp;&nbsp;(&nbsp;&nbsp;'+mouth+'&nbsp;&nbsp;)</br>&nbsp;'+foot;
+        monster = hat+'&nbsp;&nbsp;&nbsp;'+lEyeB+'&nbsp;&nbsp;&nbsp;'+rEyeB+'<br/>&nbsp;&nbsp;('+lEye+')&nbsp;('+rEye+')<br/>&nbsp;&nbsp;&nbsp;&nbsp;'+neck+'<br/>&nbsp;'+lArm+'&nbsp;'+nJoin+'&nbsp;'+rArm+'<br/>&nbsp;&nbsp;(&nbsp;&nbsp;'+mouth+'&nbsp;&nbsp;)<br/>&nbsp;'+foot;
     }else if (!(nJoin) && neck){
-        monster = hat+'&nbsp;&nbsp;&nbsp;'+lEyeB+'&nbsp;&nbsp;'+rEyeB+'</br>&nbsp;&nbsp;('+lEye+')&nbsp;('+rEye+')</br>&nbsp;'+lArm+'&nbsp;&nbsp;'+neck+'&nbsp;&nbsp;'+rArm+'</br>&nbsp;&nbsp;(&nbsp;&nbsp;'+mouth+'&nbsp;&nbsp;)</br>&nbsp;'+foot;
+        monster = hat+'&nbsp;&nbsp;&nbsp;'+lEyeB+'&nbsp;&nbsp;'+rEyeB+'<br/>&nbsp;&nbsp;('+lEye+')&nbsp;('+rEye+')<br/>&nbsp;'+lArm+'&nbsp;&nbsp;'+neck+'&nbsp;&nbsp;'+rArm+'<br/>&nbsp;&nbsp;(&nbsp;&nbsp;'+mouth+'&nbsp;&nbsp;)<br/>&nbsp;'+foot;
     }else if (nJoin && !(neck)){
-        monster = hat+'&nbsp;&nbsp;&nbsp;'+lEyeB+'&nbsp;&nbsp;'+rEyeB+'</br>&nbsp;&nbsp;('+lEye+')&nbsp;('+rEye+')</br>&nbsp;'+lArm+'&nbsp;'+nJoin+'&nbsp;'+rArm+'</br>&nbsp;&nbsp;(&nbsp;&nbsp;'+mouth+'&nbsp;&nbsp;)</br>&nbsp;'+foot;
+        monster = hat+'&nbsp;&nbsp;&nbsp;'+lEyeB+'&nbsp;&nbsp;'+rEyeB+'<br/>&nbsp;&nbsp;('+lEye+')&nbsp;('+rEye+')<br/>&nbsp;'+lArm+'&nbsp;'+nJoin+'&nbsp;'+rArm+'<br/>&nbsp;&nbsp;(&nbsp;&nbsp;'+mouth+'&nbsp;&nbsp;)<br/>&nbsp;'+foot;
     }else{
-        monster = hat+'&nbsp;&nbsp;&nbsp;'+lEyeB+'&nbsp;&nbsp;'+rEyeB+'</br>&nbsp;'+lArm+'('+lEye+')&nbsp;('+rEye+')'+rArm+'</br>&nbsp;&nbsp;(&nbsp;&nbsp;'+mouth+'&nbsp;&nbsp;)</br>&nbsp;'+foot;
+        monster = hat+'&nbsp;&nbsp;&nbsp;'+lEyeB+'&nbsp;&nbsp;'+rEyeB+'<br/>&nbsp;'+lArm+'('+lEye+')&nbsp;('+rEye+')'+rArm+'<br/>&nbsp;&nbsp;(&nbsp;&nbsp;'+mouth+'&nbsp;&nbsp;)<br/>&nbsp;'+foot;
     };
     return(monster);
 };
 
-function remNBSP(str){
-    return(str.replace('&nbsp;', ' '));
+function remHTML(str){
+    str = str.replace(/&nbsp;/g, ' ');
+    str = str.replace(/<br\s*[\/]?>/gi, "\n")
+    return(str);
 };

@@ -18,8 +18,8 @@
   </head>
   <body>
     <p>source: <a href="https://github.com/michardy/Monsters.js">github.com/michardy/Monsters.js</a>
-        <div style="border:1px solid;"><pre id='m'></pre></div>
-    <div id="easy" style="display:block">
+    <div style="border:1px solid;"><pre id='m'></pre><textarea id="text" style="width:140px;height:140px;"></textarea></div>
+    <div id="easy" style="display:block"></br>
     <fieldset style="display:inline">
       <legend>Hats</legend>
       <lable for="hat0">None</lable><input type="radio" id="hat0" name="ha" value="0" onchange="sUMonster()" checked="checked"/></br>
@@ -146,6 +146,7 @@
     <script type='text/javascript'>
     m = gMonster();
     document.getElementById('m').innerHTML = m;
+    document.getElementById('text').value = remHTML(m);
     </script>
     <footer>
       <p><a href="privacy.html">privacy</a></p>

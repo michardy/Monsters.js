@@ -1,4 +1,4 @@
-//There are 155,520 unique monsters
+//There are 518,400 unique monsters
 
 var hats = ['', '&nbsp;&nbsp;_=====_</br>', '&nbsp;&nbsp;&nbsp;_____</br>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</br>&nbsp;_|_____|_</br>', '&nbsp;&nbsp;&nbsp;_____</br>&nbsp;_(_____)_</br>'];
 var necks = ['\\&nbsp;/', false];
@@ -33,4 +33,8 @@ function gMonster(){
         monster = hat+'&nbsp;&nbsp;&nbsp;'+lEyeB+'&nbsp;&nbsp;'+rEyeB+'</br>&nbsp;'+lArm+'('+lEye+')&nbsp;('+rEye+')'+rArm+'</br>&nbsp;&nbsp;(&nbsp;&nbsp;'+mouth+'&nbsp;&nbsp;)</br>&nbsp;'+foot;
     };
     return(monster);
+};
+
+function remNBSP(str){
+    return(str.replace('&nbsp;', ' '));
 };
